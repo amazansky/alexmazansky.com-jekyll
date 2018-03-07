@@ -1,0 +1,18 @@
+/* Bootstrap and Bootswatch don't work together so ensure that the jumbotron doesn't hide behind the navbar */
+body {
+  padding-top: 9em;
+}
+main {
+	padding: 1em;
+}
+.rxl-navbar-img {
+	height: 45px;
+	width: 45px;
+	border-radius: 10px;
+}
+.rxl-project-button {
+	margin-left: 7px;
+}
+.rxl-project-h2 {
+	margin-top: 5px;
+}
