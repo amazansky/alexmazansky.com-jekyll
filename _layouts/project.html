@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.name }}</title>
+        {% include head.html %}
+    </head>
+    <body>
+        <main role="main" class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ site.url }}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ site.url }}/projects">Projects</a></li>
+                <li class="breadcrumb-item active">{{ page.name }}</li>
+            </ol>
+            {% include nav.html %}
+            <h1>{{ page.name }}</h1>
+            <span>
+                {% for link in page.links %}
+                <a href="{{ link.url }}" class="btn btn-lg btn-outline-{{ link.btntype }} rxl-project-button" target="_blank" role="button">{{ link.name }}</a>
+                {% endfor %}
+            </span>
+            <br><br>
+            <p>{{ page.info }}</p>
+            <br><br>
+            <a href="../"><h5>&lt; Back</h5></a>
+            {% include bodyend.html %}
+        </main>
+    </body>
+</html>
