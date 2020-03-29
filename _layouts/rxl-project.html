@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.name }}</title>
+        {% include head.html %}
+    </head>
+    <body>
+        <!-- include nav here when it becomes needed -->
+        <section class="hero rxl-hero">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title rxl-white-text">
+                    {{ page.name }}
+                    </h1>
+                    <h2 class="subtitle rxl-white-text">
+                        <em>a project by RobotXLabs</em>
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <br>
+        <div class="container">
+            <h2 class="title">About this Project:</h2>
+            <p>{{ page.info }}</p>
+            <br>
+            {% if page.coauth %}
+            <p>
+                <i class="fa fa-fw fa-user"></i> Worked with {{ page.coauth }}
+            </p>
+            {% endif %}
+            {% if page.license %}
+            <p>
+                <i class="fas fa-gavel"></i> {{ page.name }} is licensed under <strong>{{ page.license }}</strong>.
+            </p>
+            {% endif %}
+            <br>
+            {% if page.links %}
+            <h2 class="title">Links:</h2>
+            {% for link in page.links %}
+                  <a href="{{ link.url }}" class="button is-{{ link.type }} rxl-project-button" target="_blank" role="button">{{ link.name }}</a>
+                  {% endfor %}
+            {% endif %}
+            <br><br><br><br>
+            <a href="{{site.url}}"><i class="fas fa-arrow-left"></i> <em>Back to Homepage</em></a>
+        </div>
+    </body>
+</html>

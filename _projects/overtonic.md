@@ -1,10 +1,12 @@
 ---
-name: Overtonic <em>(Science Fair 2018)</em>
+name: Overtonic
 url: overtonic
-layout: project
+layout: rxl-project
 info: Overtonic uses Fast Fourier Transforms to determine the identity of an instrument based on the musical overtones of its sound.
+license: MIT
+emoji: fas fa-wave-square
 links:
 - name: Source
   url: https://github.com/RobotXLabs/overtonic
-  btntype: primary
+  type: link
 ---

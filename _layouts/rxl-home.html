@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+        {% include head.html %}
+    </head>
+    <body>
+        <!-- include nav here when it becomes needed -->
+        <section class="hero is-large rxl-hero">
+            <div class="hero-body">
+                
+              <div class="container">
+                <h1 class="title rxl-white-text">
+                  Hey, I'm Alex.
+                </h1>
+                <h2 class="subtitle rxl-white-text">
+                  Thanks for stopping by my website!
+                </h2>
+              </div>
+            </div>
+        </section>
+        
+        <div class="container">
+            <div class="section">
+                <h1 class="title">My Projects</h1>
+                {% assign rows = site.projects.size | divided_by: 3.0 | ceil %}
+                {% for i in (1..rows) %}
+                {% assign offset = forloop.index0 | times: 3 %}
+                <div class="tile is-ancestor">
+                    {% for project in site.projects limit:3 offset:offset %}
+                    <div class="tile is-parent">
+                        <article class="tile is-child box project">
+                            <a href="{{ project.url }}" class="is-size-3">{% if project.emoji %}<i class="{{ project.emoji }}"></i> {% endif %}<strong>{{ project.name }}</strong></a>
+                            <br><br>
+                            {% if project.coauth %}
+                            <p class="lead">
+                                <i class="fa fa-fw fa-user"></i> Worked with {{ project.coauth }}
+                            </p>
+                            {% endif %}
+                            {% if project.license %}
+                            <p class="lead">
+                                <i class="fas fa-gavel"></i> Licensed under {{ project.license }}
+                            </p>
+                            {% endif %}
+                            {% if project.coauth or project.license %}<br>{% endif %}
+                            <div class="content">
+                                <p>{{ project.info }}</p>
+                            </div>
+                            {% for link in project.links %}
+                            <a href="{{ link.url }}" class="button is-{{ link.type }} rxl-project-button" target="_blank" role="button">{{ link.name }}</a>
+                            {% endfor %}
+                        </article>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>

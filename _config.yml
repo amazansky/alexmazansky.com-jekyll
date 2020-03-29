@@ -1,6 +1,6 @@
 url: "https://robotxlabs.github.io"
 
 collections:
-    projects:
-        output: true
-        permalink: /projects/:name/
+  projects:
+    output: true
+    permalink: /projects/:name
