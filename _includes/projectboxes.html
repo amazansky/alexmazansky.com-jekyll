@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="section">
+        <h1 class="title">My Projects</h1>
+        {% assign rows = site.projects.size | divided_by: 3.0 | ceil %}
+        {% for i in (1..rows) %}
+        {% assign offset = forloop.index0 | times: 3 %}
+        <div class="tile is-ancestor">
+            {% for project in site.projects limit:3 offset:offset %}
+            <div class="tile is-parent">
+                <article class="tile is-child box project">
+                    <a href="{{ project.url }}" class="is-size-3">{% if project.emoji %}<i class="{{ project.emoji }}"></i> {% endif %}<strong>{{ project.name }}</strong></a>
+                    <br><br>
+                    {% if project.coauth %}
+                    <p class="lead">
+                        <i class="fa fa-fw fa-user"></i> Worked with {{ project.coauth }}
+                    </p>
+                    {% endif %}
+                    {% if project.license %}
+                    <p class="lead">
+                        <i class="fas fa-gavel"></i> Licensed under {{ project.license }}
+                    </p>
+                    {% endif %}
+                    {% if project.coauth or project.license %}<br>{% endif %}
+                    <div class="content">
+                        <p>{{ project.info }}</p>
+                    </div>
+                    {% for link in project.links %}
+                    <a href="{{ link.url }}" class="button is-{{ link.type }} rxl-project-button" target="_blank" role="button">{{ link.name }}</a>
+                    {% endfor %}
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>

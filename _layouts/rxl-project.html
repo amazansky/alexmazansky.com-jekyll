@@ -5,15 +5,15 @@
         {% include head.html %}
     </head>
     <body>
-        <!-- include nav here when it becomes needed -->
+        {% include nav.html %}
         <section class="hero rxl-hero">
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title rxl-white-text">
-                    {{ page.name }}
+                    {% if page.emoji %}<i class="{{ page.emoji }}"></i> {% endif %} {{ page.name }}
                     </h1>
                     <h2 class="subtitle rxl-white-text">
-                        <em>a project by RobotXLabs</em>
+                        <em>a project by RobotXLabs{% if page.coauth %} and {{page.coauth}}{% endif %}</em>
                     </h2>
                 </div>
             </div>
@@ -40,8 +40,8 @@
                   <a href="{{ link.url }}" class="button is-{{ link.type }} rxl-project-button" target="_blank" role="button">{{ link.name }}</a>
                   {% endfor %}
             {% endif %}
-            <br><br><br><br>
-            <a href="{{site.url}}"><i class="fas fa-arrow-left"></i> <em>Back to Homepage</em></a>
         </div>
+
+        {% include foot.html %}
     </body>
 </html>

@@ -1,15 +1,15 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="{{ site.url }}">
-        <strong>{{ site.title }}</strong>
+        <strong>Alex M</strong>
         </a>
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="rxlnav">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         </a>
     </div>
-    <div class="navbar-menu">
+    <div id="rxlnav" class="navbar-menu">
         <div class="navbar-start">
             {% for page in site.pages %}
             {% if page.navbar == true %}
@@ -19,17 +19,8 @@
             {% endif %}
             {% endfor %}
         </div>
-    </div>
-    <!-- <div class="navbar-end">
-        <div class="navbar-item">
-            <div class="buttons">
-                <a class="button is-primary">
-                <strong>Sign up</strong>
-                </a>
-                <a class="button is-light">
-                Log in
-                </a>
-            </div>
+        <div class="navbar-end">
+            <a class="navbar-item" href="https://github.com/robotxlabs">GitHub</a>
         </div>
-    </div> -->
-</nav>    
+    </div>
+</nav>
