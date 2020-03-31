@@ -8,7 +8,7 @@
             {% for project in site.projects limit:3 offset:offset %}
             <div class="tile is-parent">
                 <article class="tile is-child box project">
-                    <a href="{{ project.url }}" class="is-size-3">{% if project.emoji %}<i class="{{ project.emoji }}"></i> {% endif %}<strong>{{ project.name }}</strong></a>
+                    <a href="{{ project.url }}" class="is-size-3">{% if project.icon %}<i class="{{ project.icon }}"></i> {% endif %}<strong>{{ project.name }}</strong></a>
                     <br><br>
                     {% if project.coauth %}
                     <p class="lead">
