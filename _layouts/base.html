@@ -6,16 +6,15 @@
         {% include head.html %}
     </head>
     <body>
-        {% include nav.html %}
         <section class="hero rxl-hero">
             <div class="hero-body">
                 
               <div class="container">
                 <h1 class="title rxl-white-text">
-                  {{ page.title }}
+                  {% if page.title != "Home" %}{{ page.title }}{% else %}Hey, I'm Alex.{% endif %}
                 </h1>
                 <h2 class="subtitle rxl-white-text">
-                  {{ page.subtitle }}
+                  {% if page.title != "Home" %}{{ page.subtitle }}{% else %}Thanks for stopping by my website!{% endif %}
                 </h2>
               </div>
             </div>

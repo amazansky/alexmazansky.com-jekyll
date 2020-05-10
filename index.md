@@ -1,5 +1,6 @@
 ---
 title: Home
-layout: rxl-home
+layout: base
 navbar: true
 ---
+{% include projectboxes.html %}
