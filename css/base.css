@@ -9,14 +9,23 @@
 .mono {
 	font-family: 'IBM Plex Mono', monospace;
 }
-h1.slash {
+
+.slash-header {
 	color: #155263;
-	font-family: 'IBM Plex Mono', monospace;
 }
-h1.slash::before {
+.slash-header::before, .slash-header::after, .slash-subheader::before {
 	color: #FF6F3C;
+}
+.slash-header::before {
+	content: '/* ';
+}
+.slash-header::after {
+	content: ' */';
+}
+.slash-subheader::before {
 	content: '// ';
 }
+
 .linkicon {
 	margin-right: 5px;
 }
