@@ -4,7 +4,8 @@ info: Back to Drive is a nifty Chrome extension which reverts the button link on
 license: MIT
 icon: fab fa-google-drive
 links:
-- name: Source
+- name: GitHub
+  icon: fab fa-github
   url: https://github.com/amazansky/back-to-drive
   type: link
 - name: Download

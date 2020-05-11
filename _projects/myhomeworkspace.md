@@ -5,13 +5,11 @@ info: MyHomeworkSpace is an online planner that lets you easily stay on top of y
 license: MIT
 icon: fas fa-book-open
 links:
-- name: Legacy Source
-  url: https://github.com/MyHomeworkSpace/MyHomeworkSpace
-  type: warning
-- name: Source
-  url: https://github.com/MyHomeworkSpace/client
+- name: GitHub
+  icon: fab fa-github
+  url: https://github.com/MyHomeworkSpace
   type: link
-- name: Official Site
+- name: Website
   url: https://myhomework.space
   type: dark
 ---

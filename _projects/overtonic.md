@@ -4,7 +4,8 @@ info: Overtonic uses Fast Fourier Transforms to determine the identity of an ins
 license: MIT
 icon: fas fa-wave-square
 links:
-- name: Source
+- name: GitHub
+  icon: fab fa-github
   url: https://github.com/amazansky/overtonic
   type: link
 ---

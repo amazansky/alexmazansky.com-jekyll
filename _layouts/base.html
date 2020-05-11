@@ -2,7 +2,7 @@
 <html>
     <head>
         {% include analytics.html %}
-        <title>{{ page.title }}</title>
+        <title>{% if page.title != "Home" %}{{ page.title }} | {% endif %}Alex Mazansky</title>
         {% include head.html %}
     </head>
     <body>

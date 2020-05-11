@@ -1,6 +1,6 @@
 <div class="container">
     <div class="section">
-        <h1 class="title">My Projects</h1>
+        <h1 class="title slash">My Projects</h1>
         {% assign rows = site.projects.size | divided_by: 3.0 | ceil %}
         {% for i in (1..rows) %}
         {% assign offset = forloop.index0 | times: 3 %}
@@ -25,7 +25,7 @@
                         <p>{{ project.info }}</p>
                     </div>
                     {% for link in project.links %}
-                    <a href="{{ link.url }}" class="button is-{{ link.type }} rxl-project-button" target="_blank" role="button">{{ link.name }}</a>
+                    <a href="{{ link.url }}" class="button is-{{ link.type }} rxl-project-button" target="_blank" role="button">{% if link.icon %}<i class="linkicon {{ link.icon }}"></i>{% endif %} {{ link.name }}</a>
                     {% endfor %}
                 </article>
             </div>
