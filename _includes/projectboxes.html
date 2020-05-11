@@ -4,11 +4,11 @@
         {% for project in site.projects %}
         <hr>
         <div class="columns">
-            <div class="column is-1"></div>
+            <div class="column is-1 indent-col"></div>
             <div class="column">
                 <div class="columns">
                     <div class="column">
-                        <span class="is-size-3 mono slash-subheader">{% if project.icon %}<i class="{{ project.icon }}"></i> {% endif %}<strong>{{ project.name }}</strong></span>
+                        <span class="is-size-3 mono slash-subheader">{% if project.icon %}<i class="fa-fw {{ project.icon }}"></i> {% endif %}<strong>{{ project.name }}</strong></span>
                     </div>
                     <div class="column is-narrow">
                         {% for link in project.links %}

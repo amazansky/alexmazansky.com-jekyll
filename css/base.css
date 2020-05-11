@@ -26,6 +26,10 @@
 	content: '// ';
 }
 
+.indent-col {
+	max-width: 75px;
+}
+
 .linkicon {
 	margin-right: 5px;
 }
