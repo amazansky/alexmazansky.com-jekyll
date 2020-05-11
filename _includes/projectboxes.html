@@ -1,40 +1,36 @@
 <div class="container">
     <div class="section">
         <h1 class="title slash">My Projects</h1>
-        {% assign rows = site.projects.size | divided_by: 3.0 | ceil %}
-        {% for i in (1..rows) %}
-        {% assign offset = forloop.index0 | times: 3 %}
-        <div class="tile is-ancestor">
-            {% for project in site.projects limit:3 offset:offset %}
-            <div class="tile is-parent">
-                <article class="tile is-child box project">
-                    <span class="is-size-3">{% if project.icon %}<i class="{{ project.icon }}"></i> {% endif %}<strong>{{ project.name }}</strong></span>
-                    <br><br>
-                    {% if project.coauth %}
-                    <p class="lead">
-                        <i class="fas fa-fw fa-user"></i> Worked with {{ project.coauth }}
-                    </p>
-                    {% endif %}
-                    {% if project.fork %}
-                    <p class="lead">
-                        <i class="fas fa-fw fa-code-branch"></i> Based on <a href="https://github.com/{{ project.fork }}">{{ project.fork }}</a>
-                    </p>
-                    {% endif %}
-                    {% if project.license %}
-                    <p class="lead">
-                        <i class="fas fa-fw fa-gavel"></i> Licensed under {{ project.license }}
-                    </p>
-                    {% endif %}
-                    {% if project.coauth or project.license %}<br>{% endif %}
-                    <div class="content">
-                        <p>{{ project.info }}</p>
-                    </div>
-                    {% for link in project.links %}
-                    <a href="{{ link.url }}" class="button is-{{ link.type }} rxl-project-button" target="_blank" role="button">{% if link.icon %}<i class="linkicon {{ link.icon }}"></i>{% endif %} {{ link.name }}</a>
-                    {% endfor %}
-                </article>
+        {% for project in site.projects %}
+        <hr>
+        <div class="columns">
+            <div class="column">
+                <span class="is-size-3">{% if project.icon %}<i class="{{ project.icon }}"></i> {% endif %}<strong>{{ project.name }}</strong></span>
             </div>
-            {% endfor %}
+            <div class="column is-narrow">
+                {% for link in project.links %}
+                <a href="{{ link.url }}" class="button is-{{ link.type }} rxl-project-button" target="_blank" role="button">{% if link.icon %}<i class="linkicon {{ link.icon }}"></i>{% endif %} {{ link.name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        {% if project.coauth %}
+        <p class="lead">
+            <i class="fas fa-fw fa-user"></i> Worked with {{ project.coauth }}
+        </p>
+        {% endif %}
+        {% if project.fork %}
+        <p class="lead">
+            <i class="fas fa-fw fa-code-branch"></i> Based on <a href="https://github.com/{{ project.fork }}">{{ project.fork }}</a>
+        </p>
+        {% endif %}
+        {% if project.license %}
+        <p class="lead">
+            <i class="fas fa-fw fa-gavel"></i> Licensed under {{ project.license }}
+        </p>
+        {% endif %}
+        {% if project.coauth or project.license %}<br>{% endif %}
+        <div class="content">
+            <p>{{ project.info }}</p>
         </div>
         {% endfor %}
     </div>
