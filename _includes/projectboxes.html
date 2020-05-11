@@ -12,12 +12,17 @@
                     <br><br>
                     {% if project.coauth %}
                     <p class="lead">
-                        <i class="fa fa-fw fa-user"></i> Worked with {{ project.coauth }}
+                        <i class="fas fa-fw fa-user"></i> Worked with {{ project.coauth }}
+                    </p>
+                    {% endif %}
+                    {% if project.fork %}
+                    <p class="lead">
+                        <i class="fas fa-fw fa-code-branch"></i> Based on <a href="https://github.com/{{ project.fork }}">{{ project.fork }}</a>
                     </p>
                     {% endif %}
                     {% if project.license %}
                     <p class="lead">
-                        <i class="fas fa-gavel"></i> Licensed under {{ project.license }}
+                        <i class="fas fa-fw fa-gavel"></i> Licensed under {{ project.license }}
                     </p>
                     {% endif %}
                     {% if project.coauth or project.license %}<br>{% endif %}
