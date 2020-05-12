@@ -1,0 +1,64 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+.rxl-hero {
+	color: white;
+	background: linear-gradient(40deg, #155263 9%, #155263 43%, #FF6F3C calc(43% + 1px), #FF6F3C 52%, #FF9A3C calc(52% + 1px), #FF9A3C 80%, #FFC93C calc(80% + 1px), #FFC93C 100%);
+}
+.rxl-white-text {
+	color: white;
+}
+.mono {
+	font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Header/subheader colors */
+$slash-color: #FF6F3C;
+$text-color: #155263;
+
+.slash-header {
+	color: $text-color;
+
+	&::before {
+		color: $slash-color;
+		content: '/* ';
+	}
+	&::after {
+		color: $slash-color;
+		content: ' */';
+	}
+}
+.slash-subheader::before {
+	color: $slash-color;
+	content: '// ';
+}
+
+/* Language colors
+ * Colors from https://github.com/ozh/github-colors
+ */
+@mixin lang($language, $color) {
+    .lang-#{$language} {
+		border-bottom: medium solid $color;
+		margin-right: 5px;
+    }
+}
+// Keep these alphabetical
+@include lang("css", #563d7c);
+@include lang("go", #00add8);
+@include lang("html", #e34c26);
+@include lang("java", #b07219);
+@include lang("javascript", #f1e05a);
+@include lang("python", #3572a5);
+
+/* Other stuff for projects */
+.indent-col {
+	max-width: 75px;
+}
+.linkicon {
+	margin-right: 5px;
+}
+hr.project-hr {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}

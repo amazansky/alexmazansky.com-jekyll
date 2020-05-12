@@ -1,8 +1,13 @@
+---
+title: Home
+layout: base
+navbar: true
+---
 <div class="container">
     <div class="section">
         <h1 class="title mono slash-header is-size-2">My Projects</h1>
         {% for project in site.projects %}
-        <hr>
+        <hr class="project-hr">
         <div class="columns">
             <div class="column is-1 indent-col"></div>
             <div class="column">
@@ -16,25 +21,31 @@
                         {% endfor %}
                     </div>
                 </div>
+                {% if project.lang %}
+                <p>
+                    <i class="fas fa-fw fa-code"></i> 
+                    {% for i in project.lang %}
+                        <span class="lang-{{ i | downcase }}">{{ i }}</span>
+                    {% endfor %}
+                </p>
+                {% endif %}
                 {% if project.coauth %}
-                <p class="lead">
+                <p>
                     <i class="fas fa-fw fa-user"></i> Worked with {{ project.coauth }}
                 </p>
                 {% endif %}
                 {% if project.fork %}
-                <p class="lead">
+                <p>
                     <i class="fas fa-fw fa-code-branch"></i> Based on <a href="https://github.com/{{ project.fork }}">{{ project.fork }}</a>
                 </p>
                 {% endif %}
                 {% if project.license %}
-                <p class="lead">
+                <p>
                     <i class="fas fa-fw fa-gavel"></i> Licensed under {{ project.license }}
                 </p>
                 {% endif %}
-                {% if project.coauth or project.license %}<br>{% endif %}
-                <div class="content">
-                    <p>{{ project.info }}</p>
-                </div>
+                {% if project.coauth or project.license or project.fork %}<br>{% endif %}
+                <p>{{ project.info }}</p>
             </div>
         </div>
         {% endfor %}

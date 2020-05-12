@@ -3,6 +3,9 @@ name: Back to Drive
 info: Back to Drive is a nifty Chrome extension which reverts the button link on the upper left of Google Docs, Sheets, and Slides pages back to what it used to be, drive.google.com.
 license: MIT
 icon: fab fa-google-drive
+lang:
+- JavaScript
+- HTML
 links:
 - name: GitHub
   icon: fab fa-github
