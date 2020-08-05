@@ -2,9 +2,15 @@
 ---
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+$am-blue: #155263;
+$am-orange: #FF6F3C;
+$am-orange2: #FF9A3C;
+$am-yellow: #FFC93C;
+
 .rxl-hero {
 	color: white;
-	background: linear-gradient(40deg, #155263 9%, #155263 43%, #FF6F3C calc(43% + 1px), #FF6F3C 52%, #FF9A3C calc(52% + 1px), #FF9A3C 80%, #FFC93C calc(80% + 1px), #FFC93C 100%);
+	background: linear-gradient(-63.43deg, $am-yellow 0%, $am-yellow 10%, $am-orange2 calc(10% + 1px), $am-orange2 20%, $am-orange calc(20% + 1px), $am-orange 30%, $am-blue calc(30% + 1px), $am-blue 100%);
 }
 .rxl-white-text {
 	color: white;
@@ -14,8 +20,8 @@
 }
 
 /* Header/subheader colors */
-$slash-color: #FF6F3C;
-$text-color: #155263;
+$slash-color: $am-orange;
+$text-color: $am-blue;
 
 .slash-header {
 	color: $text-color;
@@ -38,7 +44,7 @@ $text-color: #155263;
  * Colors from https://github.com/ozh/github-colors
  */
 @mixin lang($language, $color) {
-    .lang-#{$language} {
+	.lang-#{$language} {
 		border-bottom: medium solid $color;
 		margin-right: 5px;
     }
@@ -58,7 +64,15 @@ $text-color: #155263;
 .linkicon {
 	margin-right: 5px;
 }
-hr.project-hr {
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
+hr {
+	background-color: #ccc;
+	height: 1px;
+	.project-hr {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
 }
+/* Bulma overrides
+$body-background-color: #000;
+@import url('https://cdn.jsdelivr.net/npm/bulma@0.8.2/bulma.sass');
+*/
