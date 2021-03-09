@@ -1,0 +1,19 @@
+---
+title: Posts
+layout: page
+navbar: true
+---
+
+<div class="section">
+    <h1 class="title mono slash-header is-size-2">My posts</h1>
+    {% for post in site.posts %}
+    <hr class="project-hr">
+    <a href="{{ post.url }}">
+        <span class="is-size-4 mono slash-subheader">{% if post.icon %}<i class="fa-fw {{ post.icon }}"></i> {% endif %}<strong>{{ post.title }}</strong></span>
+    </a>
+        <p>
+            <strong>{{ post.subtitle }}</strong>
+            {{ post.excerpt }}
+        </p>
+    {% endfor %}
+</div>

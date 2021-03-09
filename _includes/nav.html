@@ -1,26 +1,31 @@
-<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="{{ site.url }}">
-        <strong>Alex Mazansky</strong>
-        </a>
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="rxlnav">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        </a>
-    </div>
-    <div id="rxlnav" class="navbar-menu">
-        <div class="navbar-start">
-            {% for page in site.pages %}
-            {% if page.navbar == true %}
-            <a class="navbar-item" href="{{ page.url }}">
-            {{ page.title }}
+<header class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{{ site.url }}">
+                Alex Mazansky
             </a>
-            {% endif %}
-            {% endfor %}
+            <span class="navbar-burger navbar-burger-white" data-target="rxlnav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
         </div>
-        <div class="navbar-end">
-            <a class="navbar-item" href="https://github.com/amazansky">GitHub</a>
+        <div id="rxlnav" class="navbar-menu">
+            <div class="navbar-end">
+                {% for page in site.pages %}
+                {% if page.navbar == true %}
+                <a class="navbar-item" href="{{ page.url }}">{{ page.title }}</a>
+                {% endif %}
+                {% endfor %}
+                <span class="navbar-item">
+                    <a class="button is-dark is-inverted" href="https://github.com/amazansky">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>GitHub</span>
+                    </a>
+                </span>
+            </div>
         </div>
     </div>
-</nav>
+</header>

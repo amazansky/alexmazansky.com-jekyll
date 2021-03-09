@@ -1,4 +1,5 @@
 url: "https://amazansky.com"
+analytics: true
 
 collections:
   projects:

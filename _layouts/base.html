@@ -2,26 +2,10 @@
 <html>
     <head>
         {% include analytics.html %}
-        <title>{% if page.title != "Home" %}{{ page.title }} | {% endif %}Alex Mazansky</title>
         {% include head.html %}
     </head>
     <body>
-        <section class="hero rxl-hero">
-            <div class="hero-body">
-                
-              <div class="container">
-                <h1 class="title rxl-white-text mono">
-                    {% if page.title != "Home" %}{{ page.title }}{% else %}Hey, I’m Alex.{% endif %}
-                </h1>
-                <h2 class="subtitle rxl-white-text mono">
-                    {% if page.title != "Home" %}{{ page.subtitle }}{% else %}Thanks for stopping by my website!{% endif %}
-                </h2>
-              </div>
-            </div>
-        </section>
-        
-        <div class="container">{{ content }}</div>
-
+        {{ content }}
         {% include foot.html %}
     </body>
 </html>
