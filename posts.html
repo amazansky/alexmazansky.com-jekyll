@@ -11,9 +11,13 @@ navbar: true
     <a href="{{ post.url }}">
         <span class="is-size-4 mono slash-subheader">{% if post.icon %}<i class="fa-fw {{ post.icon }}"></i> {% endif %}<strong>{{ post.title }}</strong></span>
     </a>
-        <p>
-            <strong>{{ post.subtitle }}</strong>
-            {{ post.excerpt }}
-        </p>
+    <br>
+    <span class="is-size-4 mono slash-subheader"></span>
+    <span class="is-size-5 mono">{{post.date | date_to_long_string }}</span>
+    <p>
+        <strong>{{ post.subtitle }}</strong>
+        {{ post.excerpt }}
+        <a class="mono slash-subheader" href="{{ post.url }}">Read more -></a>
+    </p>
     {% endfor %}
 </div>

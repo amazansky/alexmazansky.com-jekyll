@@ -9,14 +9,14 @@ $am-orange2: #FF9A3C;
 $am-yellow: #FFC93C;
 
 .rxl-hero {
-	color: white;
-	background: linear-gradient(-63.43deg, $am-yellow 0%, $am-yellow 10%, $am-orange2 calc(10% + 1px), $am-orange2 20%, $am-orange calc(20% + 1px), $am-orange 30%, $am-blue calc(30% + 1px), $am-blue 100%);
+    color: white;
+    background: linear-gradient(-63.43deg, $am-yellow 0%, $am-yellow 10%, $am-orange2 calc(10% + 1px), $am-orange2 20%, $am-orange calc(20% + 1px), $am-orange 30%, $am-blue calc(30% + 1px), $am-blue 100%);
 }
 .rxl-white-text, .navbar-burger-white {
-	color: white;
+    color: white;
 }
 .mono {
-	font-family: 'IBM Plex Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 /* Header/subheader colors */
@@ -24,29 +24,29 @@ $slash-color: $am-orange;
 $text-color: $am-blue;
 
 .slash-header {
-	color: $text-color;
+    color: $text-color;
 
-	&::before {
-		color: $slash-color;
-		content: '/* ';
-	}
-	&::after {
-		color: $slash-color;
-		content: ' */';
-	}
+    &::before {
+        color: $slash-color;
+        content: '/* ';
+    }
+    &::after {
+        color: $slash-color;
+        content: ' */';
+    }
 }
 .slash-subheader::before {
-	color: $slash-color;
-	content: '// ';
+    color: $slash-color;
+    content: '// ';
 }
 
 /* Language colors
  * Colors from https://github.com/ozh/github-colors
  */
 @mixin lang($language, $color) {
-	.lang-#{$language} {
-		border-bottom: medium solid $color;
-		margin-right: 5px;
+    .lang-#{$language} {
+        border-bottom: medium solid $color;
+        margin-right: 5px;
     }
 }
 // Keep these alphabetical
@@ -60,18 +60,18 @@ $text-color: $am-blue;
 
 /* Other stuff for projects */
 .indent-col {
-	max-width: 75px;
+    max-width: 75px;
 }
 .linkicon {
-	margin-right: 5px;
+    margin-right: 5px;
 }
 hr {
-	background-color: #ccc;
-	height: 1px;
-	.project-hr {
-		margin-top: 0.5rem;
-		margin-bottom: 0.5rem;
-	}
+    background-color: #ccc;
+    height: 1px;
+    .project-hr {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
 }
 /* Bulma overrides
 $body-background-color: #000;
