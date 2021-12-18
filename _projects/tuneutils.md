@@ -13,6 +13,6 @@ links:
   url: https://github.com/amazansky/TuneUtils
   type: dark
 - name: Website
-  url: https://tuneutils.com
+  url: https://tuneutils.amazansky.com
   type: link
 ---
