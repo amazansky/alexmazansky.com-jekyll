@@ -42,7 +42,7 @@ navbar: true
         {% endif %}
         {% if project.license %}
         <p>
-            <i class="fas fa-fw fa-gavel"></i> Licensed under {{ project.license }}
+            <i class="fas fa-fw fa-gavel"></i> Open-source under the {{ project.license }} license{% if project.multiple_licenses %}s{% endif %}
         </p>
         {% endif %}
         {% if project.lang or project.coauth or project.license or project.fork %}<br>{% endif %}
@@ -86,7 +86,7 @@ navbar: true
                 {% endif %}
                 {% if project.license %}
                 <p>
-                    <i class="fas fa-fw fa-gavel"></i> {{ project.license }}
+                    <i class="fas fa-fw fa-gavel"></i> {{ project.license }} license{% if project.multiple_licenses %}s{% endif %}
                 </p>
                 {% endif %}
                 {% if project.lang or project.coauth or project.license or project.fork %}<br>{% endif %}
