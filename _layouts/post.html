@@ -22,12 +22,13 @@
               </div>
             </div>
         </section>
-
-        <div class="content container">
-            <br>
-            {% if page.note %}<p><strong>{{ page.note }}</strong></p>{% endif %}
-            {{ content }}
-        </div>
+        <section class="section">
+            <div class="content container">
+                <br>
+                {% if page.note %}<p><strong>{{ page.note }}</strong></p>{% endif %}
+                {{ content }}
+            </div>
+        </section>
 
         {% include foot.html %}
         <script>
