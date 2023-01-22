@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "https://www.alexmazansky.com/*"
+  to = "https://alexmazansky.com/:splat"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://amazansky.com/*"
+  to = "https://alexmazansky.com/:splat"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://www.amazansky.com/*"
+  to = "https://alexmazansky.com/:splat"
+  status = 302
+  force = true
