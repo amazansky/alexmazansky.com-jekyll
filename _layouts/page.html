@@ -25,7 +25,9 @@
         </section>
         
         {% if page.title != "Home" %}<div class="content container">{% endif %}
-            {{ content }}
+            <div class="section">
+                {{ content }}
+            </div>
         {% if page.title != "Home" %}</div>{% endif %}
 
         {% include foot.html %}
