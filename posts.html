@@ -6,6 +6,7 @@ navbar: true
 
 <h1 class="title mono slash-header is-size-2">Posts</h1>
 {% for post in site.posts %}
+
 <hr class="project-hr">
 <a href="{{ post.url }}">
     <span class="is-size-4 mono slash-subheader">{% if post.icon %}<i class="fa-fw {{ post.icon }}"></i> {% endif %}<strong>{{ post.title }}</strong></span>
@@ -17,7 +18,9 @@ navbar: true
 <br>
 {% endif %}
 
-<span class="is-size-6 mono slash-subheader">{{post.date | date_to_long_string }}</span>
+<span class="is-size-6 mono slash-subheader">
+    {{post.date | date_to_long_string }} | {{ post.content | number_of_words | divided_by: 300 | append: ' min. read' }}
+</span>
 
 <p>
     {{ post.excerpt }}
