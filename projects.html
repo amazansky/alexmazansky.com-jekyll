@@ -22,30 +22,29 @@ navbar: true
                 {% endfor %}
             </div>
         </div>
-        {% if project.lang %}
         <p>
+            {% if project.lang %}
             <i class="fas fa-fw fa-code"></i>
             {% for i in project.lang %}
                 <span class="lang-{{ i | downcase }}">{{ i }}</span>
             {% endfor %}
-        </p>
-        {% endif %}
-        {% if project.coauth %}
-        <p>
+            {% endif %}
+
+            {% if project.coauth %}
+            <br>
             <i class="fas fa-fw fa-user"></i> Worked with {{ project.coauth }}
-        </p>
-        {% endif %}
-        {% if project.fork %}
-        <p>
+            {% endif %}
+
+            {% if project.fork %}
+            <br>
             <i class="fas fa-fw fa-code-branch"></i> Forked from <a href="https://github.com/{{ project.fork }}">{{ project.fork }}</a>
-        </p>
-        {% endif %}
-        {% if project.license %}
-        <p>
+            {% endif %}
+
+            {% if project.license %}
+            <br>
             <i class="fas fa-fw fa-gavel"></i> Open-source under the {{ project.license }} license{% if project.multiple_licenses %}s{% endif %}
+            {% endif %}
         </p>
-        {% endif %}
-        {% if project.lang or project.coauth or project.license or project.fork %}<br>{% endif %}
         <p>{{ project.info }}</p>
         {% endfor %}
 
@@ -66,30 +65,31 @@ navbar: true
                 {% for link in project.links %}
                 <a href="{{ link.url }}" class="button is-small is-{{ link.type }} rxl-project-button" target="_blank" role="button">{% if link.icon %}<i class="linkicon {{ link.icon }}"></i>{% endif %} {{ link.name }}</a>
                 {% endfor %}
-                {% if project.lang %}
                 <p>
-                    <i class="fas fa-fw fa-code"></i>
-                    {% for i in project.lang %}
-                        <span class="lang-{{ i | downcase }}">{{ i }}</span>
-                    {% endfor %}
-                </p>
-                {% endif %}
-                {% if project.coauth %}
-                <p>
+                    {% if project.lang %}
+                        <i class="fas fa-fw fa-code"></i>
+                        {% for i in project.lang %}
+                            <span class="lang-{{ i | downcase }}">{{ i }}</span>
+                        {% endfor %}
+                    {% endif %}
+
+                    {% if project.coauth %}
+                    <br>
                     <i class="fas fa-fw fa-user"></i> {{ project.coauth }}
-                </p>
-                {% endif %}
-                {% if project.fork %}
-                <p>
+                    {% endif %}
+
+                    {% if project.fork %}
+                    <br>
                     <i class="fas fa-fw fa-code-branch"></i> <a href="https://github.com/{{ project.fork }}">{{ project.fork }}</a>
-                </p>
-                {% endif %}
-                {% if project.license %}
-                <p>
+                    {% endif %}
+
+                    {% if project.license %}
+                    <br>
                     <i class="fas fa-fw fa-gavel"></i> {{ project.license }} license{% if project.multiple_licenses %}s{% endif %}
+                    {% endif %}
+
+                    {% if project.lang or project.coauth or project.license or project.fork %}<br>{% endif %}
                 </p>
-                {% endif %}
-                {% if project.lang or project.coauth or project.license or project.fork %}<br>{% endif %}
                 <p>{{ project.info }}</p>
             </div>
 

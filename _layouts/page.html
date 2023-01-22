@@ -14,17 +14,17 @@
             <div class="hero-body">
               <div class="container">
                 <h1 class="title rxl-white-text mono">
-                    {% if page.title != "Home" %}{{ page.title }}{% else %}Hey, I’m Alex.{% endif %}
+                    {{ page.title }}
                 </h1>
                 <h2 class="subtitle rxl-white-text mono">
-                    {% if page.title != "Home" %}{{ page.subtitle }}{% else %}Thanks for stopping by my website!{% endif %}
+                    {{ page.subtitle }}
                 </h2>
               </div>
             </div>
             {% endif %}
         </section>
         
-        {% if page.title != "Home" %}<div class="container">{% endif %}
+        {% if page.title != "Home" %}<div class="content container">{% endif %}
             {{ content }}
         {% if page.title != "Home" %}</div>{% endif %}
 
