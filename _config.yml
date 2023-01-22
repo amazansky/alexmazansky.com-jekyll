@@ -4,3 +4,6 @@ analytics: true
 collections:
   projects:
     output: false
+
+plugins:
+ - jekyll-target-blank
