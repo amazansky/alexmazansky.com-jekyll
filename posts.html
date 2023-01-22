@@ -4,7 +4,7 @@ layout: page
 navbar: true
 ---
 
-<h1 class="title mono slash-header is-size-2">My posts</h1>
+<h1 class="title mono slash-header is-size-2">Posts</h1>
 {% for post in site.posts %}
 <hr class="project-hr">
 <a href="{{ post.url }}">
@@ -13,7 +13,7 @@ navbar: true
 <br>
 
 {% if post.subtitle %}
-<strong class="is-size-6 mono slash-subheader">{{ post.subtitle }}</strong>
+<span class="is-size-6 mono slash-subheader"><strong>{{ post.subtitle }}</strong></span>
 <br>
 {% endif %}
 
@@ -21,6 +21,6 @@ navbar: true
 
 <p>
     {{ post.excerpt }}
-    <a class="mono slash-subheader" href="{{ post.url }}">Read more -></a>
+    <!-- <a class="mono slash-subheader" href="{{ post.url }}">Read more -></a> -->
 </p>
 {% endfor %}
