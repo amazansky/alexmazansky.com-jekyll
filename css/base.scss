@@ -1,7 +1,6 @@
 ---
 ---
-
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&display=swap');
 
 $am-blue: #155263;
 $am-orange: #FF6F3C;
@@ -11,6 +10,11 @@ $am-yellow: #FFC93C;
 .rxl-hero {
     color: white;
     background: linear-gradient(-63.43deg, $am-yellow 0%, $am-yellow 10%, $am-orange2 calc(10% + 1px), $am-orange2 20%, $am-orange calc(20% + 1px), $am-orange 30%, $am-blue calc(30% + 1px), $am-blue 100%);
+}
+
+/* Font stuff */
+body, button, input, select, textarea {
+    font-family: 'IBM Plex Sans', serif;
 }
 .rxl-white-text, .navbar-burger-white, .hero.is-dark .navbar-item, .hero.is-dark .navbar-link {
     color: white;
@@ -73,6 +77,7 @@ hr {
         margin-bottom: 0.5rem;
     }
 }
+
 /* Bulma overrides
 $body-background-color: #000;
 @import url('https://cdn.jsdelivr.net/npm/bulma@0.8.2/bulma.sass');

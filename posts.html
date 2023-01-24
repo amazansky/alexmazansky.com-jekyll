@@ -9,12 +9,14 @@ navbar: true
 
 <hr class="project-hr">
 <a href="{{ post.url }}">
-    <span class="is-size-4 mono slash-subheader">{% if post.icon %}<i class="fa-fw {{ post.icon }}"></i> {% endif %}<strong>{{ post.title }}</strong></span>
+    <!-- <span class="is-size-4 mono slash-subheader">{% if post.icon %}<i class="fa-fw {{ post.icon }}"></i> {% endif %}<strong>{{ post.title }}</strong></span> -->
+    <span class="is-size-4 mono"><strong>{{ post.title }}</strong></span>
 </a>
 <br>
 
 {% if post.subtitle %}
-<span class="is-size-6 mono slash-subheader"><strong>{{ post.subtitle }}</strong></span>
+<!-- <span class="is-size-6 mono slash-subheader"><strong>{{ post.subtitle }}</strong></span> -->
+<span class="is-size-6 mono"><strong>{{ post.subtitle }}</strong></span>
 <br>
 {% endif %}
 
