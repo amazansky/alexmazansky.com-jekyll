@@ -12,20 +12,20 @@
             
             <div class="hero-body">
                 
-              <div class="container">
+              <div class="container rxl-post">
                 <h1 class="title rxl-white-text mono">
                     {{ page.title }}
                 </h1>
                 <h2 class="subtitle rxl-white-text mono">
-                    {% if page.subtitle %}{{ page.subtitle }}<br>{% endif %}{{page.date | date_to_long_string }}{% if page.author %} • {{ page.author }}{% endif %}
+                    {% if page.subtitle %}{{ page.subtitle }}<br>{% endif %}<br>{{page.date | date_to_long_string }}{% if page.author %} | {{ page.author }}{% endif %}
                 </h2>
               </div>
             </div>
         </section>
-        <section class="section">
-            <div class="content container">
+        <section class="section rxl-post-section">
+            <div class="content container rxl-post">
                 <br>
-                {% if page.note %}<p><strong>{{ page.note }}</strong></p>{% endif %}
+                {% if page.note %}<p><strong>{{ page.note | smartify }}</strong></p>{% endif %}
                 {{ content }}
             </div>
         </section>
