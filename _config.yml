@@ -4,6 +4,9 @@ analytics: true
 collections:
   projects:
     output: false
+  posts:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title
 
 plugins:
  - jekyll-target-blank
