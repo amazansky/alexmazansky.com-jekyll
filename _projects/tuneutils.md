@@ -12,6 +12,10 @@ links:
   icon: fab fa-github
   url: https://github.com/amazansky/TuneUtils
   type: dark
+- name: Post
+  icon: fas fa-rss-square
+  url: posts/2023/01/24/passion-project
+  type: dark
 - name: Website
   url: https://tuneutils.amazansky.com
   type: link
