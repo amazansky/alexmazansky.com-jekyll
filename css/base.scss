@@ -1,48 +1,40 @@
 ---
 ---
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-$am-blue: #155263;
-$am-orange: #FF6F3C;
-$am-orange2: #FF9A3C;
-$am-yellow: #FFC93C;
+// TODO: use color relationships to finalize palette
+// TODO: add Bulma dark mode support with blue
+$am-blue: #264653;
+$am-green: #2C3D32;
+$am-brown: #4B3C32;
+$am-gray: #444441;
 
 .rxl-hero {
     color: white;
-    background: linear-gradient(-63.43deg, $am-yellow 0%, $am-yellow 10%, $am-orange2 calc(10% + 1px), $am-orange2 20%, $am-orange calc(20% + 1px), $am-orange 30%, $am-blue calc(30% + 1px), $am-blue 100%);
+    // background: linear-gradient(-63.43deg, $am-yellow 0%, $am-yellow 10%, $am-orange2 calc(10% + 1px), $am-orange2 20%, $am-orange calc(20% + 1px), $am-orange 30%, $am-blue calc(30% + 1px), $am-blue 100%);
+    background-color: $am-blue !important;
 }
 
 /* Font stuff */
+html {
+    font-size: 17px;
+}
+
 body, button, input, select, textarea {
-    font-family: 'IBM Plex Sans', serif;
+    font-family: 'Rubik', serif;
 }
 .rxl-white-text, .navbar-burger-white, .hero.is-dark .navbar-item, .hero.is-dark .navbar-link {
     color: white;
 }
-.mono {
-    font-family: 'IBM Plex Mono', monospace;
+
+.font-header {
+    font-family: 'Merriweather', serif;
 }
 
-/* Header/subheader colors */
-$slash-color: $am-orange;
-$text-color: $am-blue;
-
-.slash-header {
-    color: $text-color;
-
-    &::before {
-        color: $slash-color;
-        content: '/* ';
-    }
-    &::after {
-        color: $slash-color;
-        content: ' */';
-    }
-}
-.slash-subheader::before {
-    color: $slash-color;
-    content: '// ';
-}
+// TODO: add monospace support
+// .font-mono {
+//     font-family: monospace;
+// }
 
 /* Language colors
  * Colors from https://github.com/ozh/github-colors

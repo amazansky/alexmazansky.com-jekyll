@@ -5,28 +5,28 @@ layout: page
 navbar: true
 ---
 
-<h1 class="title mono slash-header is-size-2">Posts</h1>
+<h1 class="title font-header is-size-2">Posts</h1>
 {% for post in site.posts %}
 
 <hr class="project-hr">
 <a href="{{ post.url }}">
-    <!-- <span class="is-size-4 mono slash-subheader">{% if post.icon %}<i class="fa-fw {{ post.icon }}"></i> {% endif %}<strong>{{ post.title }}</strong></span> -->
-    <span class="is-size-4 mono"><strong>{{ post.title }}</strong></span>
+    <!-- <span class="is-size-4">{% if post.icon %}<i class="fa-fw {{ post.icon }}"></i> {% endif %}<strong>{{ post.title }}</strong></span> -->
+    <span class="is-size-4 font-header"><strong>{{ post.title }}</strong></span>
 </a>
 <br>
 
 {% if post.subtitle %}
-<!-- <span class="is-size-6 mono slash-subheader"><strong>{{ post.subtitle }}</strong></span> -->
-<span class="is-size-6 mono"><strong>{{ post.subtitle }}</strong></span>
+<!-- <span class="is-size-6"><strong>{{ post.subtitle }}</strong></span> -->
+<span class="is-size-6"><strong>{{ post.subtitle }}</strong></span>
 <br>
 {% endif %}
 
-<span class="is-size-6 mono slash-subheader">
+<span class="is-size-6">
     {{post.date | date_to_long_string }} | {{ post.content | number_of_words | divided_by: 300 | append: ' min. read' }}
 </span>
 
 <p>
     {{ post.excerpt }}
-    <a class="mono slash-subheader" href="{{ post.url }}">Read more -></a>
+    <a href="{{ post.url }}">Read more...</a>
 </p>
 {% endfor %}

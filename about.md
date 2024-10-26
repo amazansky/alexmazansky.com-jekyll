@@ -4,7 +4,7 @@ permalink: /about
 layout: page
 navbar: true
 ---
-<h1 class="mono slash-header is-size-2">About</h1>
+<h1 class="font-header is-size-2">About</h1>
 
 ---
 

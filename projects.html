@@ -8,12 +8,12 @@ navbar: true
 {% assign regular_projects = site.projects | where: "type", "regular" %}
 {% assign small_projects = site.projects | where: "type", "small" %}
 
-<h1 class="title mono slash-header is-size-2">Projects</h1>
+<h1 class="title font-header is-size-2">Projects</h1>
 {% for project in regular_projects %}
 <hr class="project-hr">
 <div class="columns">
     <div class="column">
-        <span class="is-size-3 mono slash-subheader">{% if project.icon %}<i class="fa-fw {{ project.icon }}"></i> {% endif %}<strong>{{ project.name }}</strong></span>
+        <span class="is-size-3 font-header">{% if project.icon %}<i class="fa-fw {{ project.icon }}"></i> {% endif %}<strong>{{ project.name }}</strong></span>
     </div>
     <div class="column is-narrow">
         {% for link in project.links %}
@@ -59,7 +59,7 @@ navbar: true
 {% endif %}
 
     <div class="column is-4">
-        <span class="is-size-4 mono slash-subheader">{% if project.icon %}<i class="fa-fw {{ project.icon }}"></i> {% endif %}<strong>{{ project.name }} </strong></span>
+        <span class="is-size-4 font-header">{% if project.icon %}<i class="fa-fw {{ project.icon }}"></i> {% endif %}<strong>{{ project.name }} </strong></span>
         <br>
         {% for link in project.links %}
         <a href="{{ link.url }}" class="button is-small is-{{ link.type }} rxl-project-button" target="_blank" role="button">{% if link.icon %}<i class="linkicon {{ link.icon }}"></i>{% endif %} {{ link.name }}</a>
