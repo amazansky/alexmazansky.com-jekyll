@@ -13,8 +13,8 @@ $am-brown: #4B3C32;
 $am-gray: #444441;
 
 // TODO: make these into a mixin?
-$am-brown-lightish: color.adjust($am-brown, $lightness: 20%);
-$am-brown-light: color.adjust($am-brown, $lightness: 28%);
+$am-brown-lightish: color.adjust($am-brown, $lightness: 16%);
+$am-brown-light: color.adjust($am-brown, $lightness: 20%);
 $am-brown-lighter: color.adjust($am-brown, $lightness: 36%);
 $am-brown-lightest: color.adjust($am-brown, $lightness: 44%);
 
@@ -36,6 +36,7 @@ $am-brown-lightest: color.adjust($am-brown, $lightness: 44%);
 .am-homepage-btn {
     background-color: $am-brown-light;
     border-color: $am-brown-light;
+    color: white;
 
     &:hover {
         background-color: $am-brown-lightish;
