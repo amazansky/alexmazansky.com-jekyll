@@ -15,6 +15,7 @@ $am-gray: #444441;
     background-color: $am-blue !important;
 }
 
+/* Footer stuff */
 .am-footer-subtitle {
     margin-bottom: 0.5rem !important;
 }
@@ -26,6 +27,17 @@ $am-gray: #444441;
 .footer {
   background-color: $am-blue !important;
   padding-bottom: 3rem !important;
+}
+
+/* Keep the footer sticky at the bottom of the page */
+#am-flex-page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#am-flex-content-wrapper {
+    flex: 1;
 }
 
 /* Font stuff */

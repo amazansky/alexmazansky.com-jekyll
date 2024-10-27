@@ -4,33 +4,36 @@
         {% include head.html %}
     </head>
     <body>
-        <section class="hero is-dark rxl-hero">
-            <div class="hero-head">
-                {% include nav.html %}
-            </div>
-
-            {% if page.navbar != true %}
-            <div class="hero-body">
-              <div class="container">
-                <h1 class="title rxl-white-text font-header">
-                    {{ page.title }}
-                </h1>
-                <h2 class="subtitle rxl-white-text">
-                    {{ page.subtitle }}
-                </h2>
-              </div>
-            </div>
-            {% endif %}
-        </section>
+        <div id="am-flex-page-wrapper">
+            <div id="am-flex-content-wrapper">
+                <section class="hero is-dark rxl-hero">
+                    <div class="hero-head">
+                        {% include nav.html %}
+                    </div>
         
-        {% if page.title != "Home" %}<div class="content container">{% endif %}
-            <div class="section">
-                {{ content }}
+                    {% if page.navbar != true %}
+                    <div class="hero-body">
+                      <div class="container">
+                        <h1 class="title rxl-white-text font-header">
+                            {{ page.title }}
+                        </h1>
+                        <h2 class="subtitle rxl-white-text">
+                            {{ page.subtitle }}
+                        </h2>
+                      </div>
+                    </div>
+                    {% endif %}
+                </section>
+                
+                {% if page.title != "Home" %}<div class="content container">{% endif %}
+                    <div class="section">
+                        {{ content }}
+                    </div>
+                {% if page.title != "Home" %}</div>{% endif %}
             </div>
-        {% if page.title != "Home" %}</div>{% endif %}
 
-        {% include navbottom.html %}
-
+            {% include navbottom.html %}
+        </div>
         {% include foot.html %}
         <script>
             littlefoot.littlefoot()
