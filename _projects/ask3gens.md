@@ -1,7 +1,7 @@
 ---
 name: Ask3Gens
 coauth: <a href="https://ask3gens.com/about/">Ask3Gens Team</a>
-info: Ask3Gens is an online social movement dedicated to fostering the transfer of knowledge among generations. Use <em>#ask3gens</em> on social media to ask or answer a question.
+info: Online social movement dedicated to fostering the transfer of knowledge among generations. Use *#ask3gens* on social media to ask or answer a question.
 icon: fas fa-hashtag
 lang:
 - Python

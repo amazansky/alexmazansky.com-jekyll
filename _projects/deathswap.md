@@ -1,6 +1,6 @@
 ---
 name: DeathSwap
-info: This is a (work in progress!) Minecraft plugin which allows users to play Dream’s implementation of the game DeathSwap, originally conceived by SethBling.
+info: Minecraft plugin that implements Dream's version of the minigame DeathSwap, originally conceived by SethBling.
 license: MIT
 fork: ConcreteCactus/DeathSwap
 icon: fas fa-gamepad

@@ -71,6 +71,7 @@ body, button, input, select, textarea {
     }
 }
 // Keep these alphabetical
+@include lang("c", #555555);
 @include lang("css", #563d7c);
 @include lang("go", #00add8);
 @include lang("html", #e34c26);

@@ -1,9 +1,9 @@
 ---
 name: TuneUtils
-info: TuneUtils is an assortment of quick web tools designed to make the Spotify user experience a bit better. The ideas for the tools were inspired by features I wish the actual Spotify app(s) had, but which are currently not supported.
+info: Assortment of quick web tools for Spotify that provide user interfaces for otherwise API-only functionality.
 license: ISC
 icon: fab fa-spotify
-type: regular
+type: small
 lang:
 - PHP
 - CSS

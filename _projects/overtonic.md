@@ -1,6 +1,6 @@
 ---
 name: Overtonic
-info: Overtonic uses Fast Fourier Transforms to determine the identity of an instrument based on the musical overtones of its sound.
+info: Program that determines the identity of an instrument based on the musical overtones of its sound, using fast Fourier transforms.
 license: MIT
 icon: fas fa-wave-square
 lang:
