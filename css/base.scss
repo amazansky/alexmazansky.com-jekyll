@@ -1,7 +1,10 @@
 ---
 ---
+@use "sass:color";
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+/* Color palette */
 // TODO: use color relationships to finalize palette
 // TODO: add Bulma dark mode support with blue
 $am-blue: #264653;
@@ -9,10 +12,35 @@ $am-green: #2C3D32;
 $am-brown: #4B3C32;
 $am-gray: #444441;
 
+// TODO: make these into a mixin?
+$am-brown-lightish: color.adjust($am-brown, $lightness: 20%);
+$am-brown-light: color.adjust($am-brown, $lightness: 28%);
+$am-brown-lighter: color.adjust($am-brown, $lightness: 36%);
+$am-brown-lightest: color.adjust($am-brown, $lightness: 44%);
+
+/* Homepage, link, etc. colors */
 .rxl-hero {
     color: white;
     // background: linear-gradient(-63.43deg, $am-yellow 0%, $am-yellow 10%, $am-orange2 calc(10% + 1px), $am-orange2 20%, $am-orange calc(20% + 1px), $am-orange 30%, $am-blue calc(30% + 1px), $am-blue 100%);
     background-color: $am-blue !important;
+
+    a.am-social-url {
+        color: $am-brown-lightest;
+
+        &:hover {
+            color: $am-brown-lighter;
+        }
+    }
+}
+
+.am-homepage-btn {
+    background-color: $am-brown-light;
+    border-color: $am-brown-light;
+
+    &:hover {
+        background-color: $am-brown-lightish;
+        border-color: $am-brown-lightish;
+    }
 }
 
 /* Footer stuff */
