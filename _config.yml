@@ -1,3 +1,4 @@
+# Jekyll
 url: "https://alexmazansky.com"
 
 collections:
@@ -7,5 +8,34 @@ collections:
     output: true
     permalink: /:collection/:year/:month/:day/:title
 
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - "README.md"
+
 plugins:
  - jekyll-target-blank
+
+# Website customizations
+tagline-title: "Hi, I&rsquo;m Alex Mazansky"
+tagline-subtitle: "a junior at Brown University studying Computer Science."
+tagline-desc: "I&rsquo;m an ambitious problem-solver, blending technical expertise with creative insights to address meaningful challenges."
+
+social-btns:
+  # - icon: fas fa-envelope
+  #   url: 
+  #   username: 
+  - icon: fab fa-github
+    name: GitHub
+    url: https://github.com/amazansky
+  - icon: fab fa-linkedin
+    name: LinkedIn
+    url: https://linkedin.com/in/alex-mazansky

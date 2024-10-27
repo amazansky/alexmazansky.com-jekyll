@@ -1,4 +1,4 @@
-<header class="navbar">
+<header class="navbar theme-dark">
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ site.url }}">
@@ -11,26 +11,24 @@
             </span>
         </div>
         <div id="rxlnav" class="navbar-menu">
-            <div class="navbar-end">
+            <div class="navbar-start">
                 {% for page in site.pages %}
                 {% if page.navbar == true %}
                 <a class="navbar-item" href="{{ page.url }}">{{ page.title }}</a>
                 {% endif %}
                 {% endfor %}
+            </div>
+            <div class="navbar-end">
                 <span class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-dark is-inverted" href="https://github.com/amazansky" target="_blank">
+                        {% for btn in site.social-btns %}
+                        <a class="button is-dark is-inverted" href="{{ btn.url }}" target="_blank">
                             <span class="icon">
-                                <i class="fab fa-github"></i>
+                                <i class="{{ btn.icon }}"></i>
                             </span>
-                            <span>GitHub</span>
+                            <span>{{ btn.name }}</span>
                         </a>
-                        <a class="button is-dark is-inverted" href="https://linkedin.com/in/alex-mazansky" target="_blank">
-                            <span class="icon">
-                                <i class="fab fa-linkedin"></i>
-                            </span>
-                            <span>LinkedIn</span>
-                        </a>
+                        {% endfor %}
                     </div>
                 </span>
             </div>

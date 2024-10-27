@@ -49,6 +49,7 @@ navbar: true
 
 <hr>
 
+{% assign size_minus_one = small_projects.size | minus: 1 %}
 {% for project in small_projects %}
 
 {% assign id = forloop.index0 %}
@@ -92,9 +93,9 @@ navbar: true
         <p>{{ project.info }}</p>
     </div>
 
-{% if offset == 2 %}
+{% if offset == 2 or id == size_minus_one %}
 </div>
-{% if id != small_projects.size %}
+{% if id != size_minus_one %}
 <hr>
 {% endif %}
 {% endif %}

@@ -1,0 +1,25 @@
+<footer class="footer theme-dark rxl-hero">
+    <div class="container">
+        <div class="columns">
+            <div class="column content">
+                <p class="title is-size-4 font-header">{{ site.tagline-title }}</p>
+                <p class="subtitle is-size-6 rxl-white-text am-footer-subtitle">{{ site.tagline-subtitle }}</p>
+                <p class="am-footer-small"><small>{{ site.tagline-desc }}</small></p>
+            </div>
+            <div class="column is-2 is-hidden-touch"></div>
+            <div class="column">
+                <b class="heading">Connect with me</b><br>
+                <ul>
+                    {% for btn in site.social-btns %}
+                    <li>
+                        <span class="icon"><i class="{{ btn.icon }}"></i></span>
+                        <a href="{{ btn.url }}">
+                            {{ btn.name }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

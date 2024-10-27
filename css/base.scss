@@ -15,6 +15,19 @@ $am-gray: #444441;
     background-color: $am-blue !important;
 }
 
+.am-footer-subtitle {
+    margin-bottom: 0.5rem !important;
+}
+
+.am-footer-small {
+    line-height: 1rem !important;
+}
+
+.footer {
+  background-color: $am-blue !important;
+  padding-bottom: 3rem !important;
+}
+
 /* Font stuff */
 html {
     font-size: 17px;
