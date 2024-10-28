@@ -24,6 +24,7 @@ navbar: true
 <p>
     {% if project.lang %}
     <i class="fas fa-fw fa-code"></i>
+    Written in
     {% for i in project.lang %}
         <span class="lang-{{ i | downcase }}">{{ i }}</span>
     {% endfor %}

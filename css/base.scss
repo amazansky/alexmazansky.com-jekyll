@@ -2,7 +2,7 @@
 ---
 @use "sass:color";
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* Color palette */
 // TODO: use color relationships to finalize palette
@@ -15,7 +15,7 @@ $am-gray: #444441;
 // TODO: make these into a mixin?
 $am-brown-lightish: color.adjust($am-brown, $lightness: 16%);
 $am-brown-light: color.adjust($am-brown, $lightness: 20%);
-$am-brown-lighter: color.adjust($am-brown, $lightness: 36%);
+$am-brown-lighter: color.adjust($am-brown, $lightness: 34%);
 $am-brown-lightest: color.adjust($am-brown, $lightness: 44%);
 
 /* Homepage, link, etc. colors */
@@ -83,6 +83,10 @@ body, button, input, select, textarea {
 
 .font-header {
     font-family: 'Merriweather', serif;
+}
+
+.font-mono {
+    font-family: 'Inconsolata', 'Courier New', Courier, monospace;
 }
 
 // TODO: add monospace support

@@ -1,0 +1,73 @@
+---
+title: Contact
+permalink: /contact
+layout: page
+navbar: true
+---
+
+<h1 class="font-header is-size-2">Contact</h1>
+<hr>
+
+<div class="columns">
+    <div class="column is-5">
+        <p>
+            Thanks for your interest in reaching out! The best way to get in touch with me is through the form on this
+            page or by email to:
+        </p>
+        <p class="font-mono">
+            <strong>
+                amazansk (at) cs (dot) brown (dot) edu
+            </strong>
+        </p>
+        <!-- <p>
+            You can also find me online
+            {% assign social_sz_minus_one = site.social-btns.size | minus: 1 %}
+            ({% for btn in site.social-btns %}<a href="{{ btn.url }}">{{ btn.name }}</a>{% if forloop.index0 !=
+            social_sz_minus_one %}, {% endif %}{% endfor %}).
+        </p> -->
+        <p>
+            I try my best to respond to all correspondence promptly. Looking forward to hearing from you!
+        </p>
+    </div>
+    <div class="column is-1 is-hidden-mobile"></div>
+    <div class="column">
+        <form name="contact" method="POST" netlify>
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                    <input class="input" type="text" required placeholder="Your Name">
+                </div>
+            </div>
+    
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                    <input class="input" type="email" required placeholder="yourname@example.com">
+                </div>
+            </div>
+    
+            <div class="field">
+                <label class="label">Subject</label>
+                <div class="control">
+                    <input class="input" type="subject" name="subject" required placeholder="Something important!">
+                </div>
+            </div>
+    
+            <div class="field">
+                <label class="label">Message</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Hi Alex..."></textarea>
+                </div>
+            </div>
+    
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link" type="submit">Submit</button>
+                </div>
+                <div class="control">
+                    <button class="button is-danger is-light" type="reset">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
