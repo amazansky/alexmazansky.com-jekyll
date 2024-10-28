@@ -31,18 +31,25 @@ navbar: true
     </div>
     <div class="column is-1 is-hidden-mobile"></div>
     <div class="column">
-        <form name="contact" method="POST" netlify>
+        <form name="contact" method="POST" netlify netlify-honeypot="field1" data-netlify-recaptcha="true">
+            <div class="field is-hidden">
+                <label class="label">Don&rsquo;t fill this field out if you&rsquo;re human. It is used for spam prevention.</label>
+                <div class="control">
+                    <input class="input" type="text" name="field1" placeholder="Do not fill out this field!">
+                </div>
+            </div>
+        
             <div class="field">
                 <label class="label">Name</label>
                 <div class="control">
-                    <input class="input" type="text" required placeholder="Your Name">
+                    <input class="input" type="text" name="name" required placeholder="Your Name">
                 </div>
             </div>
     
             <div class="field">
                 <label class="label">Email</label>
                 <div class="control">
-                    <input class="input" type="email" required placeholder="yourname@example.com">
+                    <input class="input" type="email" name="email" required placeholder="yourname@example.com">
                 </div>
             </div>
     
@@ -56,9 +63,12 @@ navbar: true
             <div class="field">
                 <label class="label">Message</label>
                 <div class="control">
-                    <textarea class="textarea" placeholder="Hi Alex..."></textarea>
+                    <textarea class="textarea" name="message" placeholder="Hi Alex..."></textarea>
                 </div>
             </div>
+
+            <!-- Netlify reCAPTCHA -->
+            <div class="field" data-netlify-recaptcha="true"></div>
     
             <div class="field is-grouped">
                 <div class="control">
